@@ -20,6 +20,22 @@ function ZLOOKUP(value, column, index, threshold) {
   }
  }
 
+/**
+ * Fuzzy String Comparing
+ *
+ * @param {value1,value2,threshold,valIfEqual,valNotEqual} input The values to fuzzy match
+ * @return If similar "valIfEqual", else returns "valNotEqual"
+ * @customfunction
+ */
+
+function ZCOMPARE(value1, value2, threshold, valIfEqual, valNotEqual) {  
+  if (lev(value1, value2) > threshold){
+    return valIfEqual
+  }else{
+    return valNotEqual
+  }
+ }
+
 // Levenshtein Distance Implementation from https://gist.github.com/andrei-m/982927/0efdf215b00e5d34c90fdc354639f87ddc3bd0a5
 
 function lev(a, b){
