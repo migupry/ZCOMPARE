@@ -19,4 +19,5 @@ Exactly the same as vlook up except the last parameter: accuracy score. Accuracy
 =ZLOOKUP(search_key, range, index, accuracy_score)
 
 The helper function ZCOMPARE is used as such:
+
 =ZCOMPARE(value1, value2, accuracy_score, value_if_similar, value_if_not_similar)
