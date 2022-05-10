@@ -2,6 +2,8 @@
 
 Google Sheet Fuzzy String Matching Custom Function. The script use the Levenshtein distance implementation for javascript from https://gist.github.com/andrei-m/982927/0efdf215b00e5d34c90fdc354639f87ddc3bd0a5 with a little bit of modification to calculate the accuracy score instead of distance.
 
+This fork implements a helper function ZCOMPARE, to compare two values and return custom values based on similarity.
+
 # How to install the script
 
 1. Create or open an existing spreadsheet in Google Sheets.
@@ -15,3 +17,6 @@ Google Sheet Fuzzy String Matching Custom Function. The script use the Levenshte
 Exactly the same as vlook up except the last parameter: accuracy score. Accuracy score must be number between 0 to 100.
 
 =ZLOOKUP(search_key, range, index, accuracy_score)
+
+The helper function ZCOMPARE is used as such:
+=ZCOMPARE(value1, value2, accuracy_score, value_if_similar, value_if_not_similar)
